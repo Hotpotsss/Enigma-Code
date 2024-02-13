@@ -1,26 +1,44 @@
-import * as THREE from 'three';
+const textElement = document.getElementById('narrativeText')
+const optionButtonsElement = document.getElementById('option-buttons')
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+let state = {}
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+const narrativeTexts = [
+    {
+        id: 1,
+        text: 'You wake up in a strange place and see a jar of blue goo near you.',
+        options: [
+            {
+                text: 'Take the goo',
+                setState: {blueGoo: true},
+                nextText: 2
+            },
+            {
+                text: 'Leave the goo',
+                nextText: 2
+            }
+        ]
+    },
+    {
+        id: 2
+    }
+]
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
-camera.position.z = 5;
-
-function animate() {
-	requestAnimationFrame( animate );
-
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-
-	renderer.render( scene, camera );
+function startGame () {
+    state = {}
+    showNarrativeText(1)
 }
 
-animate();
+function showNarrativeText (textIndex) {
+    const narrativeText = narrativeText.find(narrativeText => narrativeText.id === textIndex)
+    textElement.innerText = narrativeText.text
+    while (optionButtonsElement.firstChild) {
+        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    }
+}
+
+function selectOption (option) {
+
+}
+
+startGame()
