@@ -1,8 +1,11 @@
+//Instantiate textElement variable and assign the variable to the "narrativeText" HTML text element.
 const textElement = document.getElementById('narrativeText')
+//Instantiate optionButtonsElement variable and assign the variable to the "option-buttons" HTML container element.
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
 
+//Instantiate textNodes variable which holds information regarding: 1) ID, 2) Narrative Texts, 3) Prerequisites, 4) Possesions, 5) The next narrative step.
 const textNodes = [
     {
         id: 1,
@@ -43,12 +46,6 @@ const textNodes = [
     }
 ]
 
-//A function which will be called when the game is started.
-function startGame () {
-    state = {}
-    showTextNode(1)
-}
-
 function showTextNode (textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
@@ -68,14 +65,22 @@ function showTextNode (textNodeIndex) {
     })
 }
 
+//A function which will manage and check option conditions.
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
 
+//A function which load the next narrative text and manage states.
 function selectOption (option) {
     const nextTextNodeID = option.nextText
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeID)
+}
+
+//A function which will be called when the game is started.
+function startGame () {
+    state = {}
+    showTextNode(1)
 }
 
 //Call startGame function to initiate game.
