@@ -1,0 +1,71 @@
+/* Setup border box */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Tahoma;
+}
+
+/* Style HTML body */
+body {
+    /* Center everything on the screen */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* Set background colour */
+    background-color:lightgrey;
+}
+
+/* Style HTML container */
+.container {
+    width: 800px;
+    /* To ensure it does not expand too far on the screen */
+    max-width: 80%;
+    /* Set background colour */
+    background-color: white;
+    /* Whitespacing between the container outline and the elements' outline. */
+    padding: 10px;
+    /* Round the corners */
+    border-radius: 5px;
+    /* Enable shadowing */
+    box-shadow: 0 0 10px 2px;
+}
+
+/* Style HTML button grid container */
+.btn-grid {
+    /* Organise container into a grid */
+    display: grid;
+    /* Resize grid to be two button wide. Enable button autosizing. */
+    grid-template-columns: repeat(2, auto);
+    /* Whitespacing between the buttons. */
+    gap: 10px;
+    /* Whitespacing at the top of the container */
+    margin-top: 20px;
+}
+
+/* Style HTML buttons */
+.btn {
+    /* Set background colour */
+    background-color: hsl(200, 100%, 50%);
+    /* Set border thickness and colour */
+    border: 1px solid hsl(200, 100%, 30%);
+    /* Round the corners */
+    border-radius: 5px;
+    /* Whitespacing between the text inside the button and button outline. */
+    padding: 5px 10px;
+    /* Text colour */
+    color: white;
+    /* Disable button outline */
+    outline: none;
+}
+
+.btn:hover {
+    /* Change border colour */
+    border-color: black;
+    /* Change text colour */
+    color:greenyellow;
+    /* Round the corners even more */
+    border-radius: 50px;
+}
