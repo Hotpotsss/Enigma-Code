@@ -15,9 +15,23 @@
 <body>
     <!-- Create a container element (section) -->
     <div class="container">
-        <!-- Create a text element -->
-        <div id="narrativeText">How to Page</div>
-        <!-- Create a container element (button grid) -->
+        <!-- Create a set of navigation links -->
+        <nav>
+            <!-- Create image element (when clicked will redirect to "index.html")-->
+            <a href="index.html"><img src="./images/enigmaLogo.png" class="logo"></a>
+            <!-- Create unordered list element -->
+            <ul>
+                <!-- Create list elements -->
+                <li><a href="howto.html">How To</a></li>
+                <li><a href="leaderboard.html">Leaderboards</a></li>
+            </ul>
+            <button class="btn" button onclick="window.location.href ='game.html';"><img src="./images/playIcon.png"></a>Play Now</button>
+        </nav>
+        <div class="content">
+            <h1>How to play?</h1>
+            <p>Learn how to play the Enigma Code game by reading the instructions below.</p>
+        </div>
     </div>
 </body>
 </html>
+
