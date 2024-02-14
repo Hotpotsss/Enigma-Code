@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link stylesheet "styles.css" file to index.html and define "styles.css" as a stylesheet -->
-    <link href="styles.css" rel="stylesheet">
-    <!-- Link JavaScript "game.js" file to index.html -->
+    <!-- Link stylesheet "index.css" file to "index.html" and define the css file as a stylesheet -->
+    <link href="index.css" rel="stylesheet">
+    <!-- Link JavaScript "index.js" file to "index.html" -->
     <script defer src="index.js"></script>
     <!-- Add page title -->
-    <title>Enigma Code - Play</title>
+    <title>Enigma Code - Home</title>
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon1.png">
-    <button id="myButton" class="btn">Play Game</button>
 </head>
 <body>
     <!-- Create a container element (section) -->
     <div class="container">
-        <!-- Create a text element -->
-        <div id="narrativeText">Text</div>
-        <!-- Create a container element (button grid) -->
-        <div id="option-buttons" class="btn-grid">
-            <!-- Create four button elements -->
-            <button class="btn">Option 1</button>
-            <button class="btn">Option 2</button>
-            <button class="btn">Option 3</button>
-            <button class="btn">Option 4</button>
+        <!-- Create a set of navigation links -->
+        <nav>
+            <!-- Create image element -->
+            <img src="/images/enigmaLogo.png" class="logo">
+            <!-- Create unordered list element -->
+            <ul>
+                <!-- Create list elements -->
+                <li><a href="howto.html">How To</a></li>
+                <li><a href="leaderboard.html">Leaderboards</a></li>
+            </ul>
+            <button class="btn" button onclick="window.location.href ='game.html';"><img src="/images/playIcon.png"></a>Play Now</button>
+        </nav>
+        <div class="content">
+            <h1>Solve the<br>impossible</h1>
+            <p>There are many algorithms to solve! How quickly can you decipher the Engima code?</p>
         </div>
     </div>
 </body>

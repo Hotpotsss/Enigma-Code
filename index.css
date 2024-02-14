@@ -1,0 +1,119 @@
+/* Setup styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Style HTML container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    /* Set background image with overlaying colour gradient (includes opacity) */
+    background-image: linear-gradient(rgb(117 190 218 /40%),rgb(9,0,77,80%)), url(images/enigmaMachineBG.jpg);
+    /*Set size of the background image */
+    background-size: cover;
+    /*Set position of resize background image */
+    background-position: center;
+    padding: 10px 8%;
+}
+
+/* Style navigation links */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+/* Style logo image */
+.logo {
+    width: 180px;
+    /* Autosizes the image height, based on given width */
+    height: auto;
+    /* Activates mouse cursor when image is hovered over */
+    cursor: pointer;
+}
+
+/* Style unordered list */
+nav ul {
+    /* No bulleted list styling*/
+    list-style: none;
+    /* Use entire row space*/
+    width: 100%;
+    /* Align the entire row to the right*/
+    text-align: right;
+    /* White space from the right side of the screen */
+    padding-right: 60px;
+}
+
+/* Style navigation links in unordered list */
+nav ul li {
+    /* Organise all links horizontally inline with one other*/
+    display: inline-block;
+    /* White space between each link*/
+    margin: 10px 20px;
+}
+
+/* Style anchored text in navigation links */
+nav ul li a {
+    /* Set text colour */
+    color: white;
+    /* Remove hyperlink underline */
+    text-decoration: none;
+}
+
+/* Style HTML buttons */
+.btn {
+    /* Text and images will be on the same horizontal line */
+    display: block;
+    /* Center the contents of the button */
+    align-items: center;
+    /* Whitespacing between the text inside the button and button outline. */
+    padding: 5px 0px;
+    /* Set border thickness and colour*/
+    border: 1px solid white;
+    /* Disable button outline */
+    outline: none;
+    /* Round the corners */
+    border-radius: 20px;
+    /* Set background colour */
+    background: rgb(178, 209, 252);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    width: 160px;
+}
+
+.btn:hover {
+    /* Change button background colour */
+    background: rgb(228, 159, 11);
+    /* Change border colour */
+    border-color: black;
+    /* Change text colour */
+    color: white;
+    font-weight: 900;
+}
+
+/* Style HTML button image */
+.btn img {
+    width: 20px;
+    margin-right: 7px;
+}
+
+/* Style HTML text content */
+.content {
+    margin-top: 14%;
+    color: white;
+    max-width: 620px;
+}
+
+/* Style HTML heading text content */
+.content h1 {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-bottom: 15px;
+}
